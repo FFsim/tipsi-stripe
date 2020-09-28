@@ -4,9 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Arguments;
@@ -564,19 +565,18 @@ public class StripeModule extends ReactContextBaseJavaModule {
 
     if (billingDetailsParams != null) {
 
-      ReadableMap addressParams = getMapOrNull(options, "address");
+      ReadableMap addressParams = getMapOrNull(billingDetailsParams, "address");
 
       if (addressParams != null) {
         address = new Address.Builder().
           setCity(getStringOrNull(addressParams, "city")).
-          setCountry(addressParams.getString("country")).
+          setCountry(getStringOrNull(addressParams, "country")).
           setLine1(getStringOrNull(addressParams, "line1")).
           setLine2(getStringOrNull(addressParams, "line2")).
-          setPostalCode(getStringOrNull(addressParams, "postalCode")).
+          setPostalCode(getStringOrNull(addressParams, "postal_code")).
           setState(getStringOrNull(addressParams, "state")).
           build();
       }
-
       billingDetails = new PaymentMethod.BillingDetails.Builder().
         setAddress(address).
         setEmail(getStringOrNull(billingDetailsParams, "email")).

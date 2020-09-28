@@ -936,6 +936,7 @@ RCT_EXPORT_METHOD(openApplePaySetup) {
 
 - (STPPaymentMethodAddress *)extractPaymentMethodBillingDetailsAddressFromDictionary:(NSDictionary<TPSStripeType(PaymentMethodAddress), id>*)params {
     if (!params) {return nil;}
+    NSLog(@"inizio billing");
 
     STPPaymentMethodAddress * result = [[STPPaymentMethodAddress alloc] init];
 #define simpleUnpack(key) result.key = [RCTConvert NSString:params[TPSStripeParam(PaymentMethodAddress, key)]]
@@ -946,19 +947,25 @@ RCT_EXPORT_METHOD(openApplePaySetup) {
     simpleUnpack(postalCode);
     simpleUnpack(state);
 #undef simpleUnpack
+    NSLog(@"fine billing");
+
     return result;
 }
 
 - (STPPaymentMethodBillingDetails *)extractPaymentMethodBillingDetailsFromDictionary:(NSDictionary<TPSStripeType(PaymentMethodBillingDetails), id>*)params {
     if (!params) {return nil;}
 
+    NSLog(@"dentro");
     STPPaymentMethodBillingDetails * result = [[STPPaymentMethodBillingDetails alloc] init];
 #define simpleUnpack(key) result.key = [RCTConvert NSString:params[TPSStripeParam(PaymentMethodBillingDetails, key)]]
-    result.address = params[TPSStripeParam(PaymentMethodBillingDetails, address)];
+    NSLog(@"before address");
+     result.address = params[TPSStripeParam(PaymentMethodBillingDetails, address)];
+    NSLog(@"before email billing");
     simpleUnpack(email);
     simpleUnpack(name);
     simpleUnpack(phone);
 #undef simpleUnpack
+    NSLog(@"fine");
     return result;
 }
 
@@ -967,7 +974,7 @@ RCT_EXPORT_METHOD(openApplePaySetup) {
     if (!cardParamsInput && NSNull.null != (id)cardParamsInput) {return nil;}
 
     STPPaymentMethodCardParams * card = [self extractPaymentMethodCardParamsFromDictionary:cardParamsInput];
-    STPPaymentMethodBillingDetails * details = [self extractPaymentMethodBillingDetailsFromDictionary: params[TPSStripeParam(createPaymentMethod, card)]];
+    STPPaymentMethodBillingDetails * details = [self extractPaymentMethodBillingDetailsFromDictionary: params[TPSStripeParam(createPaymentMethod, billingDetails)]];
     NSDictionary* metadata = params[TPSStripeParam(createPaymentMethod, metadata)];
 
     // TODO: decide if we want to support iDEAL bank accounts
