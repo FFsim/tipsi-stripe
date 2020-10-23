@@ -1,4 +1,4 @@
-package com.devmarvel.creditcardentry.fields;
+package creditcardentry.fields;
 
 import android.R.color;
 import android.content.Context;
@@ -9,8 +9,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.os.SystemClock;
-import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -27,10 +25,15 @@ import android.view.inputmethod.InputConnectionWrapper;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.devmarvel.creditcardentry.R;
-import com.devmarvel.creditcardentry.internal.CreditCardFieldDelegate;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+
+
+import com.gettipsi.stripe.R;
 
 import java.lang.reflect.Field;
+
+import creditcardentry.internal.CreditCardFieldDelegate;
 
 public abstract class CreditEntryFieldBase extends EditText implements
         TextWatcher, OnKeyListener, OnClickListener {

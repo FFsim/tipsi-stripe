@@ -16,9 +16,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.devmarvel.creditcardentry.fields.SecurityCodeText;
-import com.devmarvel.creditcardentry.library.CreditCard;
-import com.devmarvel.creditcardentry.library.CreditCardForm;
 import com.facebook.react.bridge.Promise;
 import com.gettipsi.stripe.R;
 import com.gettipsi.stripe.StripeModule;
@@ -29,6 +26,10 @@ import com.stripe.android.ApiResultCallback;
 import com.stripe.android.model.Card;
 import com.stripe.android.model.PaymentMethod;
 import com.stripe.android.model.PaymentMethodCreateParams;
+
+import creditcardentry.fields.SecurityCodeText;
+import creditcardentry.library.CreditCard;
+import creditcardentry.library.CreditCardForm;
 
 /**
  * Created by dmitriy on 11/13/16

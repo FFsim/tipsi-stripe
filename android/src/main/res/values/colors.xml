@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#005eff</color>
+  <color name="text_helper_color">#a8a8a8</color>
 
     <color name="spinnerItem">#AAAAAA</color>
     <color name="editText">#AAAAAA</color>

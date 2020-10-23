@@ -1,8 +1,9 @@
-package com.devmarvel.creditcardentry.library;
+package creditcardentry.library;
 
 import androidx.annotation.DrawableRes;
 
-import com.devmarvel.creditcardentry.R;
+
+import com.gettipsi.stripe.R;
 
 import java.io.Serializable;
 
@@ -33,7 +34,7 @@ public enum CardType implements Serializable {
     AMEX("American Express", R.drawable.ic_card_amex, CardRegex.REGX_AMEX, CardRegex.REGX_AMEX_TYPE),
     DISCOVER("Discover", R.drawable.ic_card_discover, CardRegex.REGX_DISCOVER, CardRegex.REGX_DISCOVER_TYPE),
     DINERS("Diners Club", R.drawable.ic_card_diners, CardRegex.REGX_DINERS_CLUB, CardRegex.REGX_DINERS_CLUB_TYPE),
-    JCB("JCB",R.drawable.ic_card_jcb,CardRegex.REGX_JCB,CardRegex.REGX_JCB_TYPE),
+    JCB("JCB",R.drawable.ic_card_jcb, CardRegex.REGX_JCB, CardRegex.REGX_JCB_TYPE),
     INVALID("Unknown", R.drawable.ic_card_placeholder, null, null);
 
   /** name for humans */

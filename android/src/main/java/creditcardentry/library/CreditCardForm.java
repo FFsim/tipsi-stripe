@@ -1,4 +1,4 @@
-package com.devmarvel.creditcardentry.library;
+package creditcardentry.library;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,9 +7,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
-import androidx.annotation.NonNull;
-import androidx.core.os.ParcelableCompat;
-import androidx.core.os.ParcelableCompatCreatorCallbacks;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.Gravity;
@@ -20,8 +17,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.devmarvel.creditcardentry.R;
-import com.devmarvel.creditcardentry.internal.CreditCardEntry;
+import androidx.annotation.NonNull;
+import androidx.core.os.ParcelableCompat;
+import androidx.core.os.ParcelableCompatCreatorCallbacks;
+
+import com.gettipsi.stripe.R;
+
+import creditcardentry.internal.CreditCardEntry;
 
 public class CreditCardForm extends RelativeLayout {
 
@@ -127,7 +129,7 @@ public class CreditCardForm extends RelativeLayout {
 		cardImageFrame.addView(cardFrontImage);
 
 		ImageView cardBackImage = new ImageView(context);
-		layoutParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		cardBackImage.setLayoutParams(layoutParams);
 		cardBackImage.setImageResource(CardType.INVALID.backResource);
 		cardBackImage.setVisibility(View.GONE);

@@ -55,7 +55,6 @@ dependencies {
   implementation "com.google.firebase:firebase-core:$firebaseVersion"
   implementation 'com.stripe:stripe-android:10.4.5'
   // OLD implementation 'com.github.tipsi:CreditCardEntry:1.5.1' --> NOW WITH MODULE
-  implementation project(path: ':CreditCardEntry')
 }
 repositories {
   google()

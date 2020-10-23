@@ -1,8 +1,6 @@
-package com.devmarvel.creditcardentry.internal;
+package creditcardentry.internal;
 
 import android.annotation.SuppressLint;
-
-import com.devmarvel.creditcardentry.library.CardType;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,6 +9,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import creditcardentry.library.CardType;
 
 /**
  * TODO - diners club not yet implemented

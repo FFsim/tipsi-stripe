@@ -1,4 +1,4 @@
-package com.devmarvel.creditcardentry.internal;
+package creditcardentry.internal;
 
 import android.graphics.Camera;
 import android.graphics.Matrix;
@@ -27,7 +27,7 @@ class FlipAnimator extends Animation {
 	 * assumed that view1 is "visible" and view2 is "gone" before the animation
 	 * starts. At the end of the animation, view1 will be "gone" and view2 will
 	 * be "visible". If forward is false, the reverse is assumed.
-	 * 
+	 *
 	 * @param fromView
 	 *            First view in the transition.
 	 * @param toView

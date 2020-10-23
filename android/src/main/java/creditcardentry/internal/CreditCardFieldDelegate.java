@@ -1,9 +1,9 @@
-package com.devmarvel.creditcardentry.internal;
+package creditcardentry.internal;
 
 import android.widget.EditText;
 
-import com.devmarvel.creditcardentry.fields.CreditEntryFieldBase;
-import com.devmarvel.creditcardentry.library.CardType;
+import creditcardentry.fields.CreditEntryFieldBase;
+import creditcardentry.library.CardType;
 
 /**
  * contract for delegate

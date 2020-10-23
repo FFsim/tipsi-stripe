@@ -8,7 +8,6 @@ import android.util.Xml;
 import android.widget.EditText;
 import android.view.inputmethod.InputMethodManager;
 
-import com.devmarvel.creditcardentry.library.CreditCardForm;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.uimanager.SimpleViewManager;
@@ -17,6 +16,8 @@ import com.facebook.react.uimanager.UIManagerModule;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
 import org.xmlpull.v1.XmlPullParser;
+
+import creditcardentry.library.CreditCardForm;
 
 /**
  * Created by dmitriy on 11/15/16

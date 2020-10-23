@@ -1,4 +1,4 @@
-package com.devmarvel.creditcardentry.internal;
+package creditcardentry.internal;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -16,9 +16,6 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
-import androidx.annotation.NonNull;
-import androidx.core.os.ParcelableCompat;
-import androidx.core.os.ParcelableCompatCreatorCallbacks;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.util.TypedValue;
@@ -41,20 +38,25 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.devmarvel.creditcardentry.R;
-import com.devmarvel.creditcardentry.fields.CreditCardText;
-import com.devmarvel.creditcardentry.fields.CreditEntryFieldBase;
-import com.devmarvel.creditcardentry.fields.ExpDateText;
-import com.devmarvel.creditcardentry.fields.SecurityCodeText;
-import com.devmarvel.creditcardentry.fields.ZipCodeText;
-import com.devmarvel.creditcardentry.library.CardType;
-import com.devmarvel.creditcardentry.library.CardValidCallback;
-import com.devmarvel.creditcardentry.library.CreditCard;
+import androidx.annotation.NonNull;
+import androidx.core.os.ParcelableCompat;
+import androidx.core.os.ParcelableCompatCreatorCallbacks;
+
+import com.gettipsi.stripe.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import creditcardentry.fields.CreditCardText;
+import creditcardentry.fields.CreditEntryFieldBase;
+import creditcardentry.fields.ExpDateText;
+import creditcardentry.fields.SecurityCodeText;
+import creditcardentry.fields.ZipCodeText;
+import creditcardentry.library.CardType;
+import creditcardentry.library.CardValidCallback;
+import creditcardentry.library.CreditCard;
 
 @SuppressLint("ViewConstructor")
 public class CreditCardEntry extends HorizontalScrollView implements
@@ -106,7 +108,7 @@ public class CreditCardEntry extends HorizontalScrollView implements
 
         int width;
 
-        if (android.os.Build.VERSION.SDK_INT < 13) {
+        if (Build.VERSION.SDK_INT < 13) {
             width = display.getWidth(); // deprecated
         } else {
             Point size = new Point();
@@ -561,8 +563,8 @@ public class CreditCardEntry extends HorizontalScrollView implements
 
     private static void relayoutChildren(View view) {
         view.measure(
-                View.MeasureSpec.makeMeasureSpec(view.getMeasuredWidth(), View.MeasureSpec.EXACTLY),
-                View.MeasureSpec.makeMeasureSpec(view.getMeasuredHeight(), View.MeasureSpec.EXACTLY));
+                MeasureSpec.makeMeasureSpec(view.getMeasuredWidth(), MeasureSpec.EXACTLY),
+                MeasureSpec.makeMeasureSpec(view.getMeasuredHeight(), MeasureSpec.EXACTLY));
         view.layout(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
     }
 

@@ -1,9 +1,9 @@
-package com.devmarvel.creditcardentry.library;
+package creditcardentry.library;
 
 import java.io.Serializable;
 
 public class CreditCard implements Serializable {
-	
+
 	private final String cardNumber;
 	private final String expDate;
 	private final String securityCode;

@@ -1,22 +1,22 @@
-package com.devmarvel.creditcardentry.fields;
+package creditcardentry.fields;
 
 import android.content.Context;
 import android.text.Editable;
-import android.text.InputFilter;
 import android.util.AttributeSet;
 
-import com.devmarvel.creditcardentry.R;
-import com.devmarvel.creditcardentry.internal.CreditCardUtil;
-import com.devmarvel.creditcardentry.library.CardType;
+import com.gettipsi.stripe.R;
+
+import creditcardentry.internal.CreditCardUtil;
+import creditcardentry.library.CardType;
 
 public class SecurityCodeText extends CreditEntryFieldBase {
 
 	private CardType type;
-	
+
 	private int length;
 
 	private String mHelperText;
-	
+
 	public SecurityCodeText(Context context) {
 		super(context);
 		init();
