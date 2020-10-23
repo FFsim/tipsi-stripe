@@ -78,7 +78,7 @@ public abstract class CreditEntryFieldBase extends EditText implements
 		setOnClickListener(this);
 		setPadding(50, 0, 50, 0);
 
-        setStyle(attrs);
+		setStyle(attrs);
     }
 
     void setStyle(AttributeSet attrs) {
@@ -105,7 +105,7 @@ public abstract class CreditEntryFieldBase extends EditText implements
     addTextChangedListener(this);
     setOnKeyListener(this);
     setOnClickListener(this);
-    setPadding(0, 0, 0, 0);
+    setPadding(50, 0, 50, 0);
 
     setStyle(attrs);
   }
