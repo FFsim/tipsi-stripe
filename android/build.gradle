@@ -39,7 +39,6 @@ android {
 }
 
 dependencies {
-  implementation project(path: ':CreditCardEntry')
   def firebaseVersion = project.hasProperty('firebaseVersion') ? project.firebaseVersion : DEFAULT_FIREBASE_MESSAGING_VERSION
   def googlePlayServicesVersion = rootProject.hasProperty('googlePlayServicesVersion')  ? rootProject.googlePlayServicesVersion : DEFAULT_GOOGLE_PLAY_SERVICES_VERSION
 
@@ -51,6 +50,7 @@ dependencies {
   implementation "com.google.firebase:firebase-core:$firebaseVersion"
   implementation 'com.stripe:stripe-android:10.4.5'
   // OLD implementation 'com.github.tipsi:CreditCardEntry:1.5.1' --> NOW WITH MODULE
+  implementation project(path: ':CreditCardEntry')
 }
 repositories {
   google()
