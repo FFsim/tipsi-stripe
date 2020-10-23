@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="CreditCardNumberHelp"/>
+    <string name="ExpirationDateHelp">Vervaldatum (MM/YY)</string>
+    <string name="SecurityCodeHelp">CVC-Code</string>
+    <string name="ZipHelp">Postcode</string>
+    <string name="SecurityCodeFieldHint">CVV</string>
+    <string name="ExpDateFieldHint">MM/YY</string>
+    <string name="ZipCodeFieldHint">Postcode</string>
+    <string name="CreditCardFormCardNumberHint">1234 5678 9012 3456</string>
+
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="CreditCardNumberHelp"/>
+    <string name="ExpirationDateHelp">Date d\'expiration (MM/AA)</string>
+    <string name="SecurityCodeHelp">Code de vérification (CVV)</string>
+    <string name="ZipHelp">Code postal de l\'adresse de facturation</string>
+    <string name="SecurityCodeFieldHint">CVV</string>
+    <string name="ExpDateFieldHint">MM/AA</string>
+    <string name="ZipCodeFieldHint">Code postal</string>
+    <string name="CreditCardFormCardNumberHint">1234 5678 9012 3456</string>
+
+</resources>

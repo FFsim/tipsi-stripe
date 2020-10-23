@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="CreditCardNumberHelp"/>
+    <string name="ExpirationDateHelp">Expiration date (MM/YY)</string>
+    <string name="SecurityCodeHelp">Security code (CVV)</string>
+    <string name="ZipHelp">Zip code of billing address</string>
+    <string name="SecurityCodeFieldHint">CVV</string>
+    <string name="ExpDateFieldHint">MM/YY</string>
+    <string name="ZipCodeFieldHint">ZIP</string>
+    <string name="CreditCardFormCardNumberHint">1234 5678 9012 3456</string>
+
+</resources>
