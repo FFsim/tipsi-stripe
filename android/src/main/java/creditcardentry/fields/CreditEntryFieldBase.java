@@ -105,7 +105,7 @@ public abstract class CreditEntryFieldBase extends EditText implements
     addTextChangedListener(this);
     setOnKeyListener(this);
     setOnClickListener(this);
-    setPadding(50, 0, 50, 0);
+    setPadding(0, 0, 0, 0);
 
     setStyle(attrs);
   }
@@ -197,8 +197,8 @@ public abstract class CreditEntryFieldBase extends EditText implements
     public Parcelable onSaveInstanceState() {
         Bundle bundle = new Bundle();
         bundle.putParcelable("instanceState", super.onSaveInstanceState());
-		bundle.putBoolean("focus", hasFocus());
-		bundle.putString("stateToSave", String.valueOf(this.getText()));
+        bundle.putBoolean("focus", hasFocus());
+        bundle.putString("stateToSave", String.valueOf(this.getText()));
         return bundle;
     }
 
@@ -245,7 +245,6 @@ public abstract class CreditEntryFieldBase extends EditText implements
             if (android.os.Build.VERSION.SDK_INT < 11) {
                 return super.deleteSurroundingText(beforeLength, afterLength);
             } else {
-
                 long eventTime = SystemClock.uptimeMillis();
 
                 int flags = KeyEvent.FLAG_SOFT_KEYBOARD

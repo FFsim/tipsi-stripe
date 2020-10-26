@@ -108,13 +108,9 @@ public class CreditCardEntry extends HorizontalScrollView implements
 
         int width;
 
-        if (Build.VERSION.SDK_INT < 13) {
-            width = display.getWidth(); // deprecated
-        } else {
-            Point size = new Point();
-            display.getSize(size);
-            width = size.x;
-        }
+        Point size = new Point();
+        display.getSize(size);
+        width = size.x;
 
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         params.gravity = Gravity.CENTER_VERTICAL;
@@ -186,7 +182,8 @@ public class CreditCardEntry extends HorizontalScrollView implements
         zipCodeText = new ZipCodeText(context, attrs);
         zipCodeText.setId(R.id.cc_zip);
         zipCodeText.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
-        if (includeZip) {
+        zipCodeText.setMinWidth(measureTextWidth(textFourDigits, "16035"));
+      if (includeZip) {
             zipCodeText.setDelegate(this);
             container.addView(zipCodeText);
             zipCodeText.setImeActionLabel("DONE", EditorInfo.IME_ACTION_DONE);
@@ -325,7 +322,7 @@ public class CreditCardEntry extends HorizontalScrollView implements
         field.requestFocus();
         if(!scrolling) {
             scrolling = true;
-            scrollToTarget(field instanceof CreditCardText ? 0 : field.getLeft(), new Runnable() {
+            scrollToTarget(field instanceof CreditCardText ? 0 : field.getRight(), new Runnable() {
                 @Override
                 public void run() {
                     scrolling = false;
